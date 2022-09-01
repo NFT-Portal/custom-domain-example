@@ -1,13 +1,10 @@
 import fs from "fs";
-import { hostname } from "os";
 import path from "path";
 
-import prodCanisterIds from "./canister_ids.json";
-import config from "./dfx.json";
+const hostName = "portal.one";
 
-const hostName = config.canisters.site.hostname;
-
-const canisterId = prodCanisterIds.site.ic;
+// portal app
+const canisterId = "k5pyw-2iaaa-aaaai-qa6fa-cai";
 if (!canisterId) {
   console.error(
     "Site has not been deployed yet. Please deploy the canister to the IC before proceeding."
